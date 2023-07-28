@@ -30,14 +30,14 @@ Usage : ./GenerateVouchers.sh [-u,-d,-e,-g]
 ### Example
 
 ```bash
-$ ./GenerateVouchers.sh -c 6 -d 480 -e 960 -g Groupe_Exemple
+$ ./GenerateVouchers.sh -u 6 -d 480 -e 960 -g Groupe_Exemple
 Creation of 6 user(s) in the group Groupe_Exemple for a connection limited to 480 minute(s), and expiring in 960 minute(s)
-Login: "hzsF", Password: "i7NcRf"
-Login: "QSw8", Password: "RDNuLm"
-Login: "JSnQ", Password: "UnG9gN"
-Login: "kaHC", Password: "tt8Fm3"
-Login: "Q5VW", Password: "eaYvNZ"
-Login: "RkSg", Password: "bf47H5"
+Login: "iNkS", Password: "ajL9Rn"
+Login: "QNSN", Password: "mdHAcT"
+Login: "4QUS", Password: "bXFHw5"
+Login: "sYXa", Password: "GwpFwY"
+Login: "SQJK", Password: "sacKYe"
+Login: "zGji", Password: "FffK7G"
 ``````
-
-![Alt text](./IMG/Vouche.png)
+![Alt text](IMG/Generate_CLI.png)
+![Alt text](IMG/Voucher_GUI.png)

@@ -63,7 +63,7 @@ source $CONF_FILE
 
 while getopts ":u:d:e:g:" option; do
   case "${option}" in
-    c)
+    u)
       u=${OPTARG}
       ;;
     d)
