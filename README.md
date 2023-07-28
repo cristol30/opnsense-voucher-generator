@@ -31,7 +31,7 @@ Usage : ./GenerateVouchers.sh [-c,-d,-e,-g]
 
 ```bash
 $ ./GenerateVouchers.sh -c 6 -d 480 -e 960 -g Groupe_Exemple
-Creation of **6** user(s) in the group **Groupe_Exemple** for a connection limited to **480** minute(s), and expiring in **960** minute(s)
+Creation of 6 user(s) in the group Groupe_Exemple for a connection limited to 480 minute(s), and expiring in 960 minute(s)
 Login: "hzsF", Password: "i7NcRf"
 Login: "QSw8", Password: "RDNuLm"
 Login: "JSnQ", Password: "UnG9gN"
