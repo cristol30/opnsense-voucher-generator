@@ -26,7 +26,8 @@ function error { echo -e "\e[31m[Error] $*\e[39m"; }
 function debug { echo -e "\e[34m[Debug] $*\e[39m"; }
 
 function usage {
-  echo -e "${BLANC}Usage : $0 [-c,-d,-e,-g]\n\n-c --> Number of users to create $VERT(Default 1)$NEUTRE"
+  echo -e "${BLANC}Usage : $0 [-u,-d,-e,-g]\n\n"
+  echo -e "${BLANC}-u --> Number of users to create $VERT(Default 1)$NEUTRE"
   echo -e "${BLANC}-d --> Active time in minutes $VERT(Default 240)$NEUTRE"
   echo -e "${BLANC}-e --> Validity time in minutes $VERT(Default 1440)$NEUTRE"
   echo -e "${BLANC}-g --> Name of the group $VERT(Default FromAPI)$NEUTRE"
@@ -60,10 +61,10 @@ fi
 
 source $CONF_FILE
 
-while getopts ":c:d:e:g:" option; do
+while getopts ":u:d:e:g:" option; do
   case "${option}" in
     c)
-      c=${OPTARG}
+      u=${OPTARG}
       ;;
     d)
       d=${OPTARG}
@@ -81,7 +82,7 @@ while getopts ":c:d:e:g:" option; do
 done
 shift $((OPTIND-1))
 
-COUNT=${c:-$DEFAULT_COUNT}
+NBRACCOUNT=${u:-$DEFAULT_NBRACCOUNT}
 DURATION=$((${d:-$DEFAULT_DURATION}*60))
 EXPIRE=$((${e:-$DEFAULT_EXPIRE}*60))
 GROUPE=${g:-$DEFAULT_GROUPE}
@@ -91,13 +92,13 @@ if [ $DURATION -gt $EXPIRE ]; then
 fi
 
 DATA="{
-  \"count\": \"$COUNT\",
+  \"count\": \"$NBRACCOUNT\",
   \"validity\": \"$DURATION\",
   \"expirytime\": \"$EXPIRE\",
   \"vouchergroup\": \"$GROUPE\"
 }"
 
-echo -e "Creation of $VERT$COUNT$NEUTRE user(s) in the group $VERT$GROUPE$NEUTRE for a connection limited to $VERT$(($DURATION/60))$NEUTRE minute(s), and expiring in $VERT$(($EXPIRE/60))$NEUTRE minute(s)"
+echo -e "Creation of $VERT$NBRACCOUNT$NEUTRE user(s) in the group $VERT$GROUPE$NEUTRE for a connection limited to $VERT$(($DURATION/60))$NEUTRE minute(s), and expiring in $VERT$(($EXPIRE/60))$NEUTRE minute(s)"
 
 curl --connect-timeout 5 -s -k \
 -H "Content-Type: application/json" \

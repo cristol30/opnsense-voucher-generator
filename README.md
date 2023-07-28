@@ -18,9 +18,9 @@ You can refer to the file **config_example.cfg**
 
 ```bash
 $ ./GenerateVouchers.sh
-Usage : ./GenerateVouchers.sh [-c,-d,-e,-g]
+Usage : ./GenerateVouchers.sh [-u,-d,-e,-g]
 
--c --> Number of users to create(Default 1)
+-u --> Number of users to create (Default 1)
 -d --> Active time in minutes (Default 240)
 -e --> Validity time in minutes (Default 1440)
 -g --> Name of the group (Default FromAPI)
