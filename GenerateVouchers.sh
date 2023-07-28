@@ -52,7 +52,7 @@ if [ ! -f $CONF_FILE ]; then
   echo -e "${BLEU}OPNSENSE_IP=${BLANC}IP of your OPNsense instance$NEUTRE"
   echo -e "${BLEU}OPNSENSE_PORT=${BLANC}Port of your OPNsense instance$NEUTRE"
   echo -e "${BLEU}OPNSENSE_VOUCHER_PROVIDER=${BLANC}Name of your Voucher provider $VERT(System -> Access -> Servers -> Voucher)$NEUTRE"
-  echo -e "${BLEU}DEFAULT_COUNT=${BLANC}1$NEUTRE"
+  echo -e "${BLEU}DEFAULT_NBRACCOUNT=${BLANC}1$NEUTRE"
   echo -e "${BLEU}DEFAULT_DURATION=${BLANC}240$NEUTRE"
   echo -e "${BLEU}DEFAULT_EXPIRE=${BLANC}1440$NEUTRE"
   echo -e "${BLEU}DEFAULT_GROUPE=${BLANC}FromAPI$NEUTRE"
