@@ -29,7 +29,7 @@ function usage {
   echo -e "${BLANC}Usage : $0 [-u,-d,-e,-g]\n\n"
   echo -e "${BLANC}-u --> Number of users to create $VERT(Default 1)$NEUTRE"
   echo -e "${BLANC}-d --> Active time in minutes $VERT(Default 240)$NEUTRE"
-  echo -e "${BLANC}-e --> Validity time in minutes $VERT(Default 1440)$NEUTRE"
+  echo -e "${BLANC}-e --> Validity time in minutes $VERT(Default 1440)$NEUTRE, you can set 0 to disable it"
   echo -e "${BLANC}-g --> Name of the group $VERT(Default FromAPI)$NEUTRE"
   exit
 }
@@ -95,7 +95,8 @@ DATA="{
   \"count\": \"$NBRACCOUNT\",
   \"validity\": \"$DURATION\",
   \"expirytime\": \"$EXPIRE\",
-  \"vouchergroup\": \"$GROUPE\"
+  \"vouchergroup\": \"$GROUPE\",
+  \"starttime\": \"1690819999\"
 }"
 
 echo -e "Creation of $VERT$NBRACCOUNT$NEUTRE user(s) in the group $VERT$GROUPE$NEUTRE for a connection limited to $VERT$(($DURATION/60))$NEUTRE minute(s), and expiring in $VERT$(($EXPIRE/60))$NEUTRE minute(s)"

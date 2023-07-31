@@ -22,7 +22,7 @@ Usage : ./GenerateVouchers.sh [-u,-d,-e,-g]
 
 -u --> Number of users to create (Default 1)
 -d --> Active time in minutes (Default 240)
--e --> Validity time in minutes (Default 1440)
+-e --> Validity time in minutes (Default 1440), you can set 0 to disable it
 -g --> Name of the group (Default FromAPI)
 
 ```
