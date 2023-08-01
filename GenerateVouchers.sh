@@ -4,7 +4,6 @@
 # Create user(s) for Captive Portal (Voucher)
 # @author Cristol Bardou
 #================================================================
-set -x
 set -o pipefail
 
 REPSCRIPT=$(cd $(dirname $0); pwd)
