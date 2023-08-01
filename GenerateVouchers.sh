@@ -4,7 +4,7 @@
 # Create user(s) for Captive Portal (Voucher)
 # @author Cristol Bardou
 #================================================================
-
+set -x
 set -o pipefail
 
 REPSCRIPT=$(cd $(dirname $0); pwd)
@@ -95,8 +95,7 @@ DATA="{
   \"count\": \"$NBRACCOUNT\",
   \"validity\": \"$DURATION\",
   \"expirytime\": \"$EXPIRE\",
-  \"vouchergroup\": \"$GROUPE\",
-  \"starttime\": \"1690819999\"
+  \"vouchergroup\": \"$GROUPE\"
 }"
 
 echo -e "Creation of $VERT$NBRACCOUNT$NEUTRE user(s) in the group $VERT$GROUPE$NEUTRE for a connection limited to $VERT$(($DURATION/60))$NEUTRE minute(s), and expiring in $VERT$(($EXPIRE/60))$NEUTRE minute(s)"
