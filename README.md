@@ -41,3 +41,6 @@ Login: "zGji", Password: "FffK7G"
 ``````
 ![Alt text](IMG/Generate_CLI.png)
 ![Alt text](IMG/Voucher_GUI.png)
+
+---
+Cristol Bardou
