@@ -86,7 +86,9 @@ DURATION=$((${d:-$DEFAULT_DURATION}*60))
 EXPIRE=$((${e:-$DEFAULT_EXPIRE}*60))
 GROUPE=${g:-$DEFAULT_GROUPE}
 
-if [ $DURATION -gt $EXPIRE ]; then
+if [ $EXPIRE -eq 0 ]; then
+  warn "No expiration set"
+elif [ $DURATION -gt $EXPIRE ]; then
   warn "Login time exceeds timeout"
 fi
 
